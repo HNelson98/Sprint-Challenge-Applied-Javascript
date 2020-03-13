@@ -37,17 +37,3 @@ function newTab(topic){
 };
 
 
-// var topics = topic.data.topics;
-// var x;
-//     const tab =
-//     document.createElement('div'),
-// tabsConatainer =
-//     document.querySelector('.topics');
-// tabsConatainer.append(tab);
-// tab.classList.add('tab');
-
-// for(x of topics){
-//     tab.textContent = x
-// }
-
-// return tab
