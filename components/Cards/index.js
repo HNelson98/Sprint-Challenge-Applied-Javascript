@@ -21,7 +21,7 @@
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
   .then(res => {
       newCard(res)
-      console.log(res)
+      console.log(res, 'from card res')
  })
   .catch(err => {
       console.log(err)
@@ -29,7 +29,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 
 function newCard(article){
     let java = article.data.articles.javascript;
-    console.log(java)
+    // console.log(java)
     java.forEach(element => {
 
 
@@ -64,7 +64,7 @@ function newCard(article){
     pic.src = element.authorPhoto
     by.textContent = element.authorName
     
-
+    return card
     });
     let boot = article.data.articles.bootstrap;
     
@@ -102,7 +102,7 @@ function newCard(article){
     pic.src = element.authorPhoto
     by.textContent = element.authorName
     
-
+    return card
     });
     let tech = article.data.articles.technology;
     tech.forEach(element => {
@@ -139,7 +139,7 @@ function newCard(article){
     pic.src = element.authorPhoto
     by.textContent = element.authorName
     
-
+    return card
     });
     let jQ = article.data.articles.jquery;
     jQ.forEach(element => {
@@ -176,9 +176,9 @@ function newCard(article){
     pic.src = element.authorPhoto
     by.textContent = element.authorName
     
-
+    return card
     });
-    let node = article.data.articles.node.js;
+    let node = article.data.articles.node;
     node.forEach(element => {
 
 
@@ -213,9 +213,9 @@ function newCard(article){
     pic.src = element.authorPhoto
     by.textContent = element.authorName
     
-
-    });
     return card
+    });
+    // return card
 }
 
 
